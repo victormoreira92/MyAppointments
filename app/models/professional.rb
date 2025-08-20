@@ -9,4 +9,5 @@
 #  updated_at :datetime         not null
 #
 class Professional < ApplicationRecord
+  validates :name, :specialty, presence: true
 end
