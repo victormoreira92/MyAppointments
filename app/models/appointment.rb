@@ -22,5 +22,5 @@
 class Appointment < ApplicationRecord
   belongs_to :user
   belongs_to :professional
-  validates :stat
+  validates :start_time, presence: true
 end
