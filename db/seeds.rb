@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+User.find_or_create_by!(email: 'email@email.com', name: 'User Name')
+2.times do |i|
+  Professional.find_or_create_by!(name: "Professional #{i + 1}", specialty: %w[pathology pediatric dermatology psychiatry].sample)
+end
