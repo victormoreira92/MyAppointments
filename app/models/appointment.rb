@@ -20,7 +20,11 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Appointment < ApplicationRecord
+  APPOINTMENT_DURATION_MINUTES = 30
+
   belongs_to :user
   belongs_to :professional
   validates :start_time, presence: true
+
+  validates_with AppointmentValidator
 end
