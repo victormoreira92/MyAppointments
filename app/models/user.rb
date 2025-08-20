@@ -9,4 +9,6 @@
 #  updated_at :datetime         not null
 #
 class User < ApplicationRecord
+  validates :email, :name, presence: true
+  validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 end
